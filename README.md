@@ -1,5 +1,26 @@
 # Norsk Økonomi - Interaktiv forskningsportal v3.1
 
+## Interaktive sider og publisering
+
+- [Hovedside og samlet forskningsrapport](index.html).
+- [Delrapport 06B – interaktive tiårsscenarioer](delrapport_06B/index.html).
+- [Delrapport 06C – gründer, likviditet, emisjon og utflytting](delrapport_06C/index.html).
+
+Delrapportene 01–12 er innarbeidet i hovedsidens samlede rapport og [Markdown-utgaven](Norsk_Okonomi_Samlet_Forskningsrapport_2026_v2.md). De foreligger ikke som tolv separate HTML-filer her. 06B og 06C har egne HTML-sider og egne rapport-, kilde- og datafiler. Lenker til begge finnes også på hovedsiden. Kildehenvisningene K01–K170 på hovedsiden fører til de tilhørende referansene.
+
+Dette er foreløpige forskningsutkast og eksempler på en åpen forskningsprosess, ikke eksternt fagfellevurderte konklusjoner. Scenarioer er betingede regneeksempler, ikke prognoser, individuell skatterådgivning eller dokumenterte nasjonale årsaksvirkninger.
+
+### Åpne lokalt
+
+HTML-sidene trenger ikke et byggetrinn. Fra repositoryets rot:
+
+```sh
+python3 -m http.server 8000
+```
+
+Åpne `http://localhost:8000/`, `http://localhost:8000/delrapport_06B/` og `http://localhost:8000/delrapport_06C/`. Modellkontroller og replikasjon av 06C er dokumentert i [replikasjonsveiledningen](delrapport_06C/LES_MEG.md). Modellenes 20 + 31 kontroller er ikke uavhengig juridisk eller vitenskapelig fagfellevurdering.
+
+
 
 ## Innhold i release v3.1
 Avsluttende konklusjon er lagt til som siste kapittel i Markdown og nettside. Interaktive datasett og modeller er beholdt. Normativ vurdering er merket separat fra kausale funn.
