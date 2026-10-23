@@ -1,6 +1,8 @@
 # Norsk Økonomi - Samlet forskningsrapport 2026
 
-**Integrert forskningsutgave 2.0 | 13. oktober 2026**  
+**Integrert forskningsutgave 3.2 | 23. oktober 2026** (Del I: v1.1.0, delrapport 10–12: v1.0, 06B: v1.0, 06C: v0.2)  
+**Publiseringsstatus:** Forskningsutkast, ikke ekstern fagfellevurdert. Observasjoner har kilder; interaktive scenarier er betingede illustrasjoner, ikke prognoser.  
+**Bruk av KI:** Rapporten er utarbeidet med hjelp av store språkmodeller (LLM-basert KI) til kildesøk, strukturering, tekst, beregningskode og kontroll. KI er ikke brukt som primærkilde, og faglig ansvar ligger hos de menneskelige forfatterne.  
 **Omfang:** Delrapporter 01 - 12, originale data- og evidensregistre for 01 - 09, institusjonelle hypoteser og reformportefølje.  
 **Status:** Samlet forskningsutkast. Ikke ekstern fagfellevurdering eller full uavhengig datareplikasjon.
 
@@ -3085,15 +3087,7 @@ SSBs framskrivinger er **ikke løfter om framtiden**. Scenarioresultater skal ik
 
 # DEL II.1 - Forskningsspor 10 (original delrapport)
 
----
-title: "Delrapport 10 - Systemdynamikk, motmodeller, styring, vippepunkter og reversibilitet"
-project: Norsk Økonomi
-version: "1.0"
-date: 2026-10-13
-language: nb-NO
-status: "Forskningsutkast - integrasjon og modellspesifikasjon; full empirisk kalibrering gjenstår"
-ai_disclosure: "Generativ KI er brukt til kildesøk, strukturering, kritisk syntese og publiseringsfiler. Bruk av andre modeller registreres ved dokumentasjon."
----
+> **Om delrapport 10.** Versjon 1.0, 13. oktober 2026. Status: Forskningsutkast – integrasjon og modellspesifikasjon; full empirisk kalibrering gjenstår. KI-bruk: Generativ KI er brukt til kildesøk, strukturering, kritisk syntese og publiseringsfiler. Bruk av andre modeller registreres ved dokumentasjon. Lokale kildehenvisninger i delrapport 10 skrives [D10-K01] osv. på nettsiden for å skille dem fra hovedrapportens K01–K176.
 
 # Delrapport 10 - Systemdynamikk, motmodeller, styring, vippepunkter og reversibilitet
 
@@ -3621,6 +3615,31 @@ A: dokumenterte/deskriptive forhold. B: samvariasjon. C: troverdig kausal identi
 # Vedlegg - Metodekontroll
 
 Se `VITENSKAPELIG_KVALITETSSIKRING.md` og originalpakken for register, proveniens og replikasjon.
+
+## Tillegg v3.2 – oppdaterte tall og nye kilder
+
+**Oppdaterte budsjettall.** Nasjonalbudsjettet 2027 anslår strukturelt oljekorrigert underskudd til 608,4 mrd. kroner i 2027 og 583,4 mrd. kroner i 2026 (løpende priser), mot 579 mrd. kroner i revidert budsjett 2026. Uttaket anslås til 2,7 % av fondet begge år, og fondet ventes å være om lag 22 400 mrd. kroner ved inngangen til 2027 [K138]. Tall i Del I som viser til 579 mrd. kroner, gjelder RNB 2026 og er beholdt som originaltekst. (A)
+
+**Petroleumsinntekter.** Statens netto kontantstrøm fra petroleumsvirksomheten anslås til 670,6 mrd. kroner i 2026 og 568,4 mrd. kroner i 2027 [K176]. Fondet fikk netto tilført 319 mrd. kroner i 2025 [K06]. Fondssimulatoren kan nå ta med slike innskudd. (A)
+
+**Nordisk konkurransekraft.** En analyse for de nordiske næringsministrene plasserer Norge foran på produktivitet og næringslivsinvesteringer, men bak på venturekapital, patenter og FoU [K171]. Funnet er relevant for H01 og H08, men er beskrivende, ikke kausalt. (A/B)
+
+**Internasjonale anbefalinger.** IMF anbefaler nøytral finanspolitikk, eksplisitte utgiftstak på mellomlang sikt, gradvis utfasing av rentefradraget og høyere arbeidsdeltakelse [K172]. OECD peker på styrkede offentlige finanser, mindre byråkrati og bedre utdanning [K173]. Rentefradraget bør tas inn som reformalternativ i tråd 03, med fordelingsanalyse.
+
+**Formuesskattereformen 2022.** Satsen gikk fra 0,85 % til 0,95 %, med 1,1 % over 20 mill. kroner, mens verdsettingsrabatten for aksjer ble redusert fra 45 % til 25 % (20 % fra 2023) [K175]. Effektiv skatt på aksjeverdi i toppen steg fra om lag 0,47 % (0,85 % × 55 %) til 0,88 % (1,1 % × 80 %), om lag 0,4 prosentpoeng. Delrapport 06B har forhåndsvalg for +0,25 pp og +0,4 pp. (D)
+
+**Bruk av KI.** Rapportpakken er utarbeidet med hjelp av store språkmodeller (LLM-basert KI) til kildesøk, strukturering, tekst, beregningskode, kontrolltester og publiseringsfiler. KI-utdata er ikke brukt som primærkilde til empiriske funn. Endelig faglig ansvar ligger hos navngitte menneskelige forfattere og fagkontrollører.
+
+**Produktivitet.** Produktivitetskommisjonens første rapport [K174] bør brukes som norsk referanseramme for tråd 02 og 07.
+
+**Nye kilder**
+
+- **K171** Copenhagen Economics for Nærings- og fiskeridepartementet (2026). *Analysis of Competitiveness in a Nordic Perspective*, 1. oktober 2026. https://regjeringen.no/no/aktuelt/nordisk-draghi-rapport-norden-svart-gode-i-dag-men-sakker-akterut/id3174432
+- **K172** IMF (2025). *Norway: Staff Concluding Statement of the 2025 Article IV Mission*. https://www.imf.org/en/News/Articles/2025/06/25/norway-staff-concluding-statement-for-the-2025-article-iv-consultation-mission
+- **K173** OECD (2026). *Norway should boost productivity and limit public spending*, 17. juni 2026. https://www.oecd.org/no/about/news/press-releases/2026/06/norway-should-boost-productivity-and-limit-public-spending-to-foster-strong-and-resilient-growth.html
+- **K174** Produktivitetskommisjonen (2015). *NOU 2015:1 Produktivitet – grunnlag for vekst og velferd*. https://www.regjeringen.no/no/dokumenter/nou-2015-1/id2395258/
+- **K175** Stortingets utredningsseksjon (2024). *Endringer i formuesskatten fra 2000 til 2024*. https://stortinget.no/globalassets/pdf/utredningsseksjonen/utredningsnotater/2024/endringer-i-formueskatten-fra-2000-til-2024-2024150.pdf
+- **K176** Norsk Petroleum / Finansdepartementet (2026). *Statens inntekter fra petroleumsvirksomheten*. https://www.norskpetroleum.no/okonomi/statens-inntekter/
 
 ## Avsluttende konklusjon - Norge har råd til å handle, men ikke til å utsette omstillingen
 

@@ -1,0 +1,83 @@
+/* Norsk Økonomi – felles stil for navigasjon, hjelpetekster, forhåndsvalg og tema.
+   Brukes av index.html, delrapport_06B/index.html og delrapport_06C/index.html. */
+:root{
+  --page:#f3f6f7;--card:#fff;--ink:#152a37;--ink2:#36505f;--muted:#687989;--line:#dbe5e8;
+  --main:#126e72;--main2:#115860;--soft:#e9f4f3;--soft2:#eff2f5;--warm:#bf8241;
+  --fn-tip-bg:#152a37;--fn-tip-ink:#f4f8fa;
+}
+body[data-tema="mork"]{
+  color-scheme:dark;--page:#101923;--card:#192837;--ink:#f0f6fa;--ink2:#d7e2ec;--muted:#a9bdcb;--line:#3b4d5e;
+  --main:#69d3d0;--main2:#92ebe1;--soft:#223e46;--soft2:#243546;--warm:#edc68b;
+  --fn-tip-bg:#e8f1f5;--fn-tip-ink:#13212d;
+}
+
+/* ---------- Toppmeny ---------- */
+.topbar{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:var(--card)}
+.topbar-inner{max-width:1440px;margin:auto;padding:0 32px;min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{font-family:Georgia,serif;font-size:24px;line-height:1;letter-spacing:-.12em;border:1.8px solid var(--main);color:var(--main2);width:40px;height:40px;display:grid;place-items:center;border-radius:9px;padding-right:5px}
+.brand-title{font-size:13px;letter-spacing:.14em;font-weight:800;text-transform:uppercase}
+.brand-sub{display:block;color:var(--muted);letter-spacing:.02em;font-size:11px;font-weight:500;text-transform:none}
+.fn-nav{display:flex;gap:18px;align-items:center;white-space:nowrap}
+.fn-nav>a,.fn-del>summary{color:var(--ink2);font-size:13px;text-decoration:none;font-weight:650;cursor:pointer}
+.fn-nav>a:hover,.fn-nav>a[aria-current="page"],.fn-del>summary:hover{color:var(--main)}
+.fn-nav>a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+.fn-del{position:relative}
+.fn-del>summary{list-style:none}
+.fn-del>summary::-webkit-details-marker{display:none}
+.fn-del>summary::after{content:" ▾";font-size:11px}
+.fn-del-liste{position:absolute;right:0;top:calc(100% + 14px);background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 40px rgba(10,30,45,.14);padding:8px;min-width:320px;display:grid;gap:2px;z-index:60;max-height:70vh;overflow:auto}
+.fn-del-liste a{display:block;padding:7px 10px;border-radius:6px;color:var(--ink2);text-decoration:none;font-size:13px;white-space:normal}
+.fn-del-liste a:hover{background:var(--soft);color:var(--main2)}
+.fn-del-liste .fn-gruppe{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800;padding:8px 10px 2px}
+.pill-button,.fn-knapp{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:7px;padding:7px 12px;font-family:inherit;font-weight:600;font-size:13px;line-height:1.3;cursor:pointer;white-space:nowrap}
+.pill-button:hover,.fn-knapp:hover{border-color:var(--main)}
+.fn-meny-knapp{display:none}
+.fn-brodsmuler{max-width:1270px;margin:14px auto 0;padding:0 20px;font-size:12px;color:var(--muted)}
+.fn-brodsmuler a{color:var(--main2)}
+@media(max-width:960px){
+  .topbar-inner{padding:0 16px;min-height:60px}
+  .brand-sub{display:none}
+  .fn-meny-knapp{display:inline-flex;align-items:center;gap:8px}
+  .fn-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 16px;white-space:normal;box-shadow:0 18px 30px rgba(10,30,45,.12);max-height:calc(100vh - 60px);overflow:auto}
+  .fn-nav.apen{display:flex}
+  .fn-nav>a,.fn-del>summary{padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px}
+  .fn-del-liste{position:static;box-shadow:none;border:0;min-width:0;padding:0 0 8px 8px;max-height:none}
+  .fn-nav>.fn-knapp{margin-top:12px;align-self:flex-start}
+}
+
+/* ---------- Hjelpetekster ---------- */
+.fn-hjelp{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:6px;border-radius:50%;border:1px solid var(--main);background:transparent;color:var(--main2);font:800 11px/1 system-ui,sans-serif;cursor:help;vertical-align:middle;padding:0;flex:none}
+.fn-hjelp:hover,.fn-hjelp[aria-expanded="true"]{background:var(--main);color:var(--card)}
+.begrep{text-decoration:underline dotted;text-underline-offset:3px;cursor:help}
+.fn-tip{position:absolute;z-index:100;max-width:340px;background:var(--fn-tip-bg);color:var(--fn-tip-ink);border-radius:8px;padding:11px 13px;font:400 12.5px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 12px 34px rgba(0,0,0,.22);pointer-events:auto}
+.fn-tip[hidden]{display:none}
+.fn-tip strong{display:block;font-size:12.5px;margin-bottom:3px}
+.fn-tip .fn-tip-meta{display:block;margin-top:6px;opacity:.78;font-size:11.5px}
+.fn-tip a{color:inherit;text-decoration:underline}
+
+/* ---------- Forhåndsvalg og nullstilling ---------- */
+.fn-presets{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:12px 0 4px}
+.fn-presets .fn-presets-tittel{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.fn-presets button{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:650;cursor:pointer}
+.fn-presets button[aria-pressed="true"]{background:var(--main);border-color:var(--main);color:var(--card)}
+.fn-presets button:hover{border-color:var(--main)}
+.fn-del-lenke{font-size:12px;color:var(--main2);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.fn-merke{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;border-radius:4px;padding:2px 6px;vertical-align:middle;margin-left:6px;border:1px solid currentColor}
+.fn-merke.a{color:#2c7a4b}.fn-merke.d{color:#a3622b}
+body[data-tema="mork"] .fn-merke.a{color:#8fd8a9}body[data-tema="mork"] .fn-merke.d{color:#f0bd84}
+.fn-standard{font-size:10.5px;color:var(--muted);font-weight:500}
+
+/* ---------- Til toppen ---------- */
+.fn-til-toppen{position:fixed;right:18px;bottom:18px;z-index:50;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 14px;font:700 12px/1 system-ui,sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.12);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+.fn-til-toppen.synlig{opacity:1;pointer-events:auto}
+
+/* ---------- Begrepsliste ---------- */
+.fn-glossar{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px 22px;margin:0;padding:0}
+.fn-glossar div{border-top:1px solid var(--line);padding-top:10px}
+.fn-glossar dt{font-weight:750;font-size:14px;color:var(--ink)}
+.fn-glossar dd{margin:4px 0 0;font-size:13px;color:var(--ink2);line-height:1.55}
+
+@media print{.topbar,.fn-presets,.fn-hjelp,.fn-til-toppen,.fn-tip,.fn-brodsmuler{display:none!important}}
+@media(prefers-reduced-motion:reduce){.fn-til-toppen{transition:none}}
+html{scroll-padding-top:84px}

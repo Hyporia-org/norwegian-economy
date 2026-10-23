@@ -1,4 +1,7 @@
-# Norsk Økonomi - Interaktiv forskningsportal v3.1
+# Norsk Økonomi - Interaktiv forskningsportal v3.2
+
+> **Publiseringsstatus:** Forskningsutkast, ikke ekstern fagfellevurdert. Observasjoner har kilder; interaktive scenarier er betingede illustrasjoner, ikke prognoser.
+> **Bruk av KI:** Rapporten er utarbeidet med hjelp av store språkmodeller (LLM-basert KI) til kildesøk, strukturering, tekst, beregningskode og kontroll. KI er ikke brukt som primærkilde, og faglig ansvar ligger hos de menneskelige forfatterne.
 
 ## Interaktive sider og publisering
 
@@ -6,7 +9,7 @@
 - [Delrapport 06B – interaktive tiårsscenarioer](delrapport_06B/index.html).
 - [Delrapport 06C – gründer, likviditet, emisjon og utflytting](delrapport_06C/index.html).
 
-Delrapportene 01–12 er innarbeidet i hovedsidens samlede rapport og [Markdown-utgaven](Norsk_Okonomi_Samlet_Forskningsrapport_2026_v2.md). De foreligger ikke som tolv separate HTML-filer her. 06B og 06C har egne HTML-sider og egne rapport-, kilde- og datafiler. Lenker til begge finnes også på hovedsiden. Kildehenvisningene K01–K170 på hovedsiden fører til de tilhørende referansene.
+Delrapportene 01–12 er innarbeidet i hovedsidens samlede rapport og [Markdown-utgaven](Norsk_Okonomi_Samlet_Forskningsrapport_2026_v2.md). De foreligger ikke som tolv separate HTML-filer her. 06B og 06C har egne HTML-sider og egne rapport-, kilde- og datafiler. Lenker til begge finnes også på hovedsiden. Kildehenvisningene K01–K176 på hovedsiden fører til de tilhørende referansene.
 
 Dette er foreløpige forskningsutkast og eksempler på en åpen forskningsprosess, ikke eksternt fagfellevurderte konklusjoner. Scenarioer er betingede regneeksempler, ikke prognoser, individuell skatterådgivning eller dokumenterte nasjonale årsaksvirkninger.
 
@@ -18,9 +21,19 @@ HTML-sidene trenger ikke et byggetrinn. Fra repositoryets rot:
 python3 -m http.server 8000
 ```
 
-Åpne `http://localhost:8000/`, `http://localhost:8000/delrapport_06B/` og `http://localhost:8000/delrapport_06C/`. Modellkontroller og replikasjon av 06C er dokumentert i [replikasjonsveiledningen](delrapport_06C/LES_MEG.md). Modellenes 20 + 31 kontroller er ikke uavhengig juridisk eller vitenskapelig fagfellevurdering.
+Åpne `http://localhost:8000/`, `http://localhost:8000/delrapport_06B/` og `http://localhost:8000/delrapport_06C/`. Felles stil og skript ligger i `assets/`. Kontroller publiseringen med `python3 tools/kontroll.py --js`. Modellkontroller og replikasjon av 06C er dokumentert i [replikasjonsveiledningen](delrapport_06C/LES_MEG.md). Modellenes 20 + 31 kontroller er ikke uavhengig juridisk eller vitenskapelig fagfellevurdering.
 
 
+
+## Nytt i release v3.2 (23. oktober 2026)
+
+- **Oppdaterte tall:** Nøkkeltallet for strukturelt underskudd viser nå Nasjonalbudsjettet 2027 (608,4 mrd. i 2027, 583,4 mrd. i 2026). Nytt tilleggskapittel med oppdaterte tall og seks nye kilder (K171–K176).
+- **Navigasjon:** Felles toppmeny på alle tre sider, mobilmeny, nedtrekk for delrapportene, brødsmuler og «til toppen».
+- **Modeller:** Forhåndsvalg som gjenskaper rapportens eksempler. Fondsmodellen har petroleumsinnskudd, uttaksregel, tømmeår og y-akse. Boligmodellen viser gjeldsgrad. 06B har forhåndsvalg for faktisk reform (+0,25 pp og +0,4 pp effektivt). 06C har forhåndsvalg for kapittel 10 og 11. Scenarioer kan deles som lenke.
+- **Forklaringer:** (?)-knapper med forklaring, kilde og evidensklasse ved parametere og nøkkeltall, og en begrepsliste.
+- **Retting:** 87 duplikate id-er, lokale kildenumre i delrapport 10 (nå D10-K01 osv.), YAML-metadata som ble vist som overskrift, versjonsnummer, hypotesefilter og -lenker, fremheving og desimaler i figurer, anonymisering i 06C.
+- **Tema og tilgjengelighet:** Mørk visning følger systeminnstillingen og huskes. Tabeller har kolonneoverskrifter for skjermlesere.
+- **Kontroll:** `python3 tools/kontroll.py --js` kjøres i GitHub Actions ved hver push. Se [CHANGELOG.md](CHANGELOG.md) og [PUBLISERING.md](PUBLISERING.md).
 
 ## Innhold i release v3.1
 Avsluttende konklusjon er lagt til som siste kapittel i Markdown og nettside. Interaktive datasett og modeller er beholdt. Normativ vurdering er merket separat fra kausale funn.

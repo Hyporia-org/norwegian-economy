@@ -75,3 +75,15 @@ Flere AI-verktøy og modeller kan inngå i forskningsprogrammets opprinnelige pr
 **Åpen kvalitetssikringsoppgave:** Verifiser rettsforståelsen mot full lovtekst og individuell skatteposisjon; dobbeltsjekk datakilder for satser og tidsgrenser; gjennomfør uavhengig reproduksjon og ekstern skattejuridisk og samfunnsøkonomisk vurdering før vitenskapelig sluttpublisering. Unngå å oversette likviditetsgap i D-modellen til anslått tap av investeringer, sysselsetting eller BNP uten kausal identifikasjon.
 
 **KI-bruk:** OpenAI ChatGPT GPT-6 har bistått med utforming av rapport, beregningskode, kontrolltester, kildekatalog og GitHub-integrasjon; dette er ikke en uavhengig fagfellevurdering.
+
+## 8. Redaksjonell revisjon v3.2 (23. oktober 2026)
+
+**Omfang:** Teknisk og redaksjonell revisjon av nettsidene, ikke ny empirisk analyse. Ingen modellformler i 06B eller 06C er endret.
+
+**Kontrollert mot primærkilder:** SPU 21 268 mrd. kroner ved utgangen av 2025 (NBIM); strukturelt underskudd 583,4 mrd. (2026) og 608,4 mrd. (2027) samt uttak 2,7 % (Nasjonalbudsjettet 2027); fruktbarhet 1,48 (2025) og 1,44 (2024) og alder ved første fødsel 30,4 år (SSB); formuesskattesatser, bunnfradrag 1,9 mill. og aksjerabatt 20 % for 2026 (Skatteetaten); 3 mill. kroner bunnfradrag for utflyttingsskatt (Finansdepartementet); satser og aksjerabatter 2021–2023 (Stortingets utredningsseksjon). Norges skatteandel 40,2 % (OECD 2024) er ikke kontrollert på nytt fordi landnotatet ikke var tilgjengelig.
+
+**Maskinell kontroll:** `tools/kontroll.py --js` kontrollerer unike id-er, interne ankre, kildehenvisninger, at nøkkeltall er lik datasettet, versjonsnummer, at 06C-kalkulatoren i nettleseren gir samme tall som `modellresultater_06C_v02.json` (433 008 kr, 293 888 kr, 7 898 050 kr, 5 605 035 kr og paritet 37,74 %), og at 06B-scenariofilen stemmer med formlene i kapittel 5 og 6.
+
+**KI-bruk:** Revisjonen er gjennomført med hjelp av en stor språkmodell (Anthropic Claude). Den har ikke utført fagfellevurdering. Endelig faglig ansvar ligger hos navngitte menneskelige forfattere og fagkontrollører.
+
+**Gjenstår:** Punktene i kapittel 5 (P0–P2) er uendret.

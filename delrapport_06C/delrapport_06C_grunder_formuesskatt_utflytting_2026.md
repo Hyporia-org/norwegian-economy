@@ -240,7 +240,7 @@ Et beregnet positivt eller negativt tall krever identiske antakelser om selskape
 | Skattemessig utflyttingsdato | nær / etter 1 år / etter 3 år | Bosted og markedsverdi |
 | Hjemland/mottakerland og skatteavtale | Må spesifiseres separat | Ingen generisk utenlandsskatt |
 
-Tallene er **påtenkte stresstestparametere**, ikke målinger av MinShitsu eller statistikk om gründere.
+Tallene er **påtenkte stresstestparametere**, ikke målinger av et konkret selskap eller statistikk om gründere.
 
 ## 5. Alternative og konkurrerende forklaringer
 
@@ -275,7 +275,7 @@ Tallene er **påtenkte stresstestparametere**, ikke målinger av MinShitsu eller
 - **A:** Lovtekst og offentlig regelbeskrivelse – kilder K06C-01 til K06C-11, regelstatus 22.10.2026.
 - **D:** Alle tabellverdier fra `modell_06C.py`, lagret i to CSV-er, generert under oppgitte antakelser.
 - **B og C:** Ingen nye egne statistiske eller kausale estimater. Tidligere resultater i delrapport 06B vurderes separat og gjentas ikke som funn fra 06C.
-- **Ikke identifisert:** MinShitsus reelle økonomi, aksjeinngangsverdi, finansieringsstruktur, bostedshistorie eller flytteplan. LinkedIn-teksten benyttes bare som *hypotese-/problemstillingskilde*, ikke som dokumentasjon av skatteutfall.
+- **Ikke identifisert:** Det konkrete selskapets reelle økonomi, aksjeinngangsverdi, finansieringsstruktur, bostedshistorie eller flytteplan. LinkedIn-teksten benyttes bare som *hypotese-/problemstillingskilde*, ikke som dokumentasjon av skatteutfall.
 - **Maskinell kontroll:** Python-modellen har 20 interne konsistenskontroller og lager tre CSV-utdata. Den modellerer ikke alle særregler og kan ikke erstatte individuell skatterådgivning.
 - **KI-bruk:** OpenAI ChatGPT (GPT-6) har bistått med kildesammenstilling, utforming av modeller, scenarioberegninger og rapporttekst per 22.10.2026. Dette er ikke ekstern fagfellevurdering. Alle rettsanvendelser og særtilfeller må kontrolleres av skattefaglig kvalifisert person før publisering som juridisk konklusjon.
 
@@ -347,7 +347,7 @@ Antatt skattemessig selskapsformue 3 mill. kr 1. januar 2026, deretter **20 % å
 - Nåverdi av de ti årlige formuesskattene ved 5 % diskonteringsrente og betaling ved årsslutt: **301 477 kr**.
 - Første svært lille gap kommer **2028** (ca. 20 kr), gitt avrunding og antatt 25 000 kr brutto utdelbar kapital. I 2030 overstiger den beregnede årlige formuesskatten 30 000 kroner; dersom vilkårene ellers er oppfylt, kan betalingsutsettelse da vurderes.
 
-Det er ikke en sannsynlighetsmodell for en bestemt person eller virksomhet. Ingen regnskapstall fra MinShitsu er brukt. Varelagerets omsetningshastighet, kapitalsyklus, kredittvilkår, bankgjeld, eventuelle nye aksjonærer og selskapets reelle frie egenkapital er ikke kjent.
+Det er ikke en sannsynlighetsmodell for en bestemt person eller virksomhet. Ingen regnskapstall fra et konkret selskap er brukt. Varelagerets omsetningshastighet, kapitalsyklus, kredittvilkår, bankgjeld, eventuelle nye aksjonærer og selskapets reelle frie egenkapital er ikke kjent.
 
 ### 10.1 Skattens «kontantkostnad» ved ny opptjening
 

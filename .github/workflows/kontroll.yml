@@ -1,0 +1,22 @@
+name: Publiseringskontroll
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  kontroll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Kontroller id-er, lenker, kilder, nøkkeltall og modellparitet
+        run: python3 tools/kontroll.py --js
+      - name: Kontroller sjekksummer for delrapport 06C
+        working-directory: delrapport_06C
+        run: sha256sum -c SHA256SUMS.txt

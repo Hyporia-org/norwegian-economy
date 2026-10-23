@@ -1,21 +1,90 @@
-<!DOCTYPE html><html lang="nb"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Norsk Økonomi - Delrapport 06B</title><meta name="description" content="Vitenskapelig forskningsutkast om skattedrevet kapitalflukt og tiårig norsk verdiskaping"><style>
-:root{--bg:#f2f5f7;--surface:#fff;--text:#142337;--muted:#5d7280;--line:#d8e2e8;--accent:#106d7a;--dark:#0f293e}*{box-sizing:border-box}body{font:16px/1.7 system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0}a{color:#116b80}header{background:linear-gradient(125deg,#0e283b,#155263);color:white;padding:4rem max(24px,calc((100vw - 1210px)/2))}header h1{max-width:980px;font:500 clamp(36px,5vw,65px)/1.12 Georgia,serif;margin:15px 0}header p{max-width:850px;color:#d5e8ec}.top{position:sticky;top:0;background:white;z-index:5;border-bottom:1px solid var(--line);padding:12px max(20px,calc((100vw - 1210px)/2));display:flex;gap:18px;align-items:center;flex-wrap:wrap}.top a{text-decoration:none;font-size:13px;font-weight:650}.layout{max-width:1270px;margin:30px auto;display:grid;grid-template-columns:235px minmax(0,1fr);gap:24px;padding:0 20px}aside{position:sticky;top:85px;align-self:start;max-height:80vh;overflow:auto;display:grid;gap:6px}aside a{color:var(--muted);text-decoration:none;font-size:12px;padding:6px}aside a:hover{background:#e5f0f2}.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px;margin-bottom:22px}h2{font:500 30px/1.3 Georgia,serif}h3{font:500 23px/1.3 Georgia,serif}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{border-bottom:1px solid var(--line);padding:11px;text-align:left;min-width:100px}th{background:#eef3f6}article h2{padding-top:18px;border-top:1px solid var(--line);margin-top:35px}article p,article li{max-width:92ch}input{accent-color:var(--accent);width:100%}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.control{background:#f5f8f9;padding:14px;border-radius:8px}.control label{display:flex;justify-content:space-between;font-size:13px;gap:8px}.value{font-variant-numeric:tabular-nums;font-weight:800}.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.outcome{background:#e9f3f4;padding:18px;border-radius:8px}.outcome strong{font:500 28px Georgia,serif;display:block}small,.note{color:var(--muted)}svg{max-width:100%;height:auto}.toolnav{display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid #b1c5cd;background:white;color:var(--dark);padding:8px 14px;border-radius:6px;cursor:pointer}button:hover{background:#edf5f6}.warning{border-left:3px solid var(--accent);padding:15px;background:#edf4f5}.tab{display:none}.tab.active{display:block}@media(max-width:850px){.layout{display:block}aside{position:static;max-height:none;display:flex;overflow:auto}aside a{white-space:nowrap}.controls,.outcomes{grid-template-columns:1fr}header{padding:42px 24px}.card{padding:20px}}@media print{.top,aside,.controls,.toolnav{display:none}.layout{display:block}.card{border:0;padding:0}header{background:white;color:black;padding:0}header p{color:#333}}
-</style></head><body><nav class="top"><strong>NORSK ØKONOMI · FORSKNINGSSPOR 06B</strong><a href="#modeller">Modeller</a><a href="#studien">Full rapport</a><a href="delrapport_06B_kapitalflukt_tiar.md" download>Markdown</a><a href="scenarioer_10_ar.csv" download>Scenario-CSV</a><a href="observasjoner_utflytting.csv" download>Utflytting-CSV</a></nav><header><small>14. OKTOBER 2026 · FORSKNINGSUTKAST</small><h1>Kapitalflukt og verdiskaping - hva vet vi om effekten over ti år?</h1><p>Skatteutløst utflytting er dokumentert. Den samlede netto kausale tiårseffekten på norsk bruttoprodukt er ikke identifisert. Utforsk to transparente alternative modeller, med tydelig skille mellom observerte tall og antakelser.</p></header><div class="layout"><aside><a href="#modeller">Modellverktøy</a><a href="#studien">Forskningsrapport</a></aside><main><section class="card" id="modeller"><h2>Tiårsmodeller for norsk verdiskaping</h2><div class="warning"><b>To ALTERNATIVE mekanismer.</b> Modell A overfører en skandinavisk aggregerteffekt. Modell B er en hypotetisk beregning av uteblitte nyetableringer. De skal ikke summeres, fordi effektene kan overlappe.</div><div class="toolnav"><button onclick="choose('a')">A - Migrasjon/nivåeffekt</button><button onclick="choose('b')">B - Uteblitte gründere</button></div><div id="pane-a" class="tab active"><h3>A. Aggregerteffekt: vedvarende nivågap</h3><p>Utgangspunkt: Jakobsen mfl. -0,10 % BNP ved 1 pp økt formuesskattesats gjennom migrasjon. Overføring til Norge, BNP-grunnlag og skattesats er ikke identifisert som norsk total kausaleffekt.</p><div class="controls"><div class="control"><label>BNP-basis, mrd. kr <output id="gdpv"></output></label><input id="gdp" type="range" min="3000" max="6000" step="100" value="4500"></div><div class="control"><label>Hypotetisk skattesatsendring, pp <output id="ratev"></output></label><input id="rate" type="range" min="0" max="1" step="0.05" value="0.5"></div><div class="control"><label>Overførbarhet av koeffisient, % <output id="transv"></output></label><input id="trans" type="range" min="0" max="150" step="5" value="100"></div><div class="control"><label>BNP-vekst, %/år <output id="growthv"></output></label><input id="growth" type="range" min="0" max="5" step="0.25" value="2"></div></div><div class="outcomes"><div class="outcome"><small>Gap første år</small><strong id="a-first"></strong></div><div class="outcome"><small>Gap år 10</small><strong id="a-last"></strong></div><div class="outcome"><small>Summert BNP-gap, 10 år</small><strong id="a-sum"></strong></div></div></div><div id="pane-b" class="tab"><h3>B. Uteblitt norsk gründeraktivitet</h3><p>Antall skatteutløste nyetableringer <b>er ikke kjent</b>. Rings kausalstudie finner ingen signifikant generell gründerutflytting. Test derfor både null og alternative hypotetiske tall.</p><div class="controls"><div class="control"><label>Tapte bedrifter per år <output id="startupv"></output></label><input type="range" id="startup" min="0" max="30" step="1" value="5"></div><div class="control"><label>Bruttoprodukt/bedrift første driftsår (mill. kr) <output id="outputv"></output></label><input type="range" id="output" min="1" max="30" step="1" value="10"></div><div class="control"><label>Årlig overlevelse, % <output id="survivalv"></output></label><input type="range" id="survival" min="40" max="100" step="5" value="85"></div><div class="control"><label>Årlig vekst, % <output id="growv"></output></label><input type="range" id="grow" min="0" max="20" step="1" value="8"></div><div class="control"><label>Aktivitet erstattet av andre norske foretak, % <output id="replacev"></output></label><input type="range" id="replace" min="0" max="100" step="5" value="50"></div></div><div class="outcomes"><div class="outcome"><small>Gap år 10</small><strong id="b-last"></strong></div><div class="outcome"><small>Sum BNP-gap over ti år</small><strong id="b-sum"></strong></div><div class="outcome"><small>Modellstatus</small><strong style="font-size:18px">Hypotetisk</strong></div></div></div><div id="chart"></div><button id="csv" onclick="exportCSV()">Eksporter gjeldende modell som CSV</button><p class="note">Resultatene er årlige tap i norsk bruttoprodukt (mrd. kr), ikke tapte selskapsverdier eller skatteinntekter. Ingen separat årlig vekststraff legges til en allerede aggregert nivåkoeffisient.</p></section><section class="card" id="studien"><article><hr />
-<h2>title: &quot;Delrapport 06B - Formuesskatt, utflytting og tapt verdiskaping: tiårsestimat&quot;
-project: &quot;Norsk Økonomi&quot;
-version: &quot;1.0&quot;
-date: &quot;2026-10-14&quot;
-status: &quot;Forskningsutkast, scenarioestimater; ikke norsk total kausalestimering&quot;</h2>
-<h1>Delrapport 06B - Formuesskatt, utflytting og verdiskaping over ti år</h1>
+<!DOCTYPE html><html lang="nb"><head><meta charset="UTF-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="light dark" name="color-scheme"/>
+<title>Norsk Økonomi – Delrapport 06B</title><meta content="Forskningsutkast om skattedrevet kapitalflukt og tiårig norsk verdiskaping, med interaktive scenarioer." name="description"/>
+<link href="../assets/felles.css" rel="stylesheet"/><style>
+:root{--bg:var(--page);--surface:var(--card);--text:var(--ink);--accent:var(--main)}
+*{box-sizing:border-box}body{font:16px/1.7 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--page);color:var(--ink);margin:0}a{color:var(--main2)}
+.hero6{background:linear-gradient(125deg,#0e283b,#155263);color:#fff;padding:3.4rem max(24px,calc((100vw - 1210px)/2))}.hero6 h1{max-width:980px;font:500 clamp(34px,5vw,60px)/1.12 Georgia,serif;margin:15px 0}.hero6 p{max-width:850px;color:#d5e8ec}.hero6 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bfe0e4}
+.hero6 .erklaering{border-left:3px solid #6fd0c9;background:rgba(255,255,255,.07);padding:12px 16px;font-size:14px;max-width:880px;margin-top:18px}.hero6 .erklaering a{color:#fff}
+.layout{max-width:1270px;margin:24px auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;padding:0 20px}
+aside.sidemeny{position:sticky;top:90px;align-self:start;max-height:80vh;overflow:auto;display:grid;gap:4px}aside.sidemeny a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 8px;border-radius:6px}aside.sidemeny a:hover{background:var(--soft);color:var(--main2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;margin-bottom:22px}
+h2{font:500 30px/1.3 Georgia,serif}h3{font:500 23px/1.3 Georgia,serif}.dok-tittel{font-size:34px}
+table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{border-bottom:1px solid var(--line);padding:11px;text-align:left;min-width:100px}th{background:var(--soft2)}
+article h2{padding-top:18px;border-top:1px solid var(--line);margin-top:35px}article p,article li{max-width:92ch}article li{overflow-wrap:anywhere}
+input[type=range]{accent-color:var(--main);width:100%}
+.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.control{background:var(--soft2);padding:14px;border-radius:8px}
+.control label{display:flex;justify-content:space-between;align-items:center;font-size:13px;gap:8px}.control label>span{display:inline-flex;align-items:center;flex-wrap:wrap}
+.control output{font-variant-numeric:tabular-nums;font-weight:800;color:var(--main2);white-space:nowrap}
+.axis-labels{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.outcome{background:var(--soft);padding:18px;border-radius:8px}.outcome strong{font:500 28px Georgia,serif;display:block}
+small,.note{color:var(--muted)}#chart svg{max-width:780px;display:block;margin:18px 0 6px}svg{max-width:100%;height:auto}
+.toolnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.fane{border:1px solid var(--line);background:var(--card);color:var(--ink2);padding:9px 15px;border-radius:7px;cursor:pointer;font-weight:650}
+.fane[aria-selected="true"]{background:var(--main);border-color:var(--main);color:var(--card)}
+.warning{border-left:3px solid var(--main);padding:15px;background:var(--soft)}
+.tab[hidden]{display:none}.knapperad{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+@media(max-width:850px){.layout{display:block}aside.sidemeny{position:static;max-height:none;display:flex;overflow:auto;margin-bottom:12px}aside.sidemeny a{white-space:nowrap}.controls,.outcomes{grid-template-columns:1fr}.hero6{padding:36px 20px}.card{padding:20px}}
+@media print{aside.sidemeny,.controls,.toolnav,.knapperad{display:none}.layout{display:block}.card{border:0;padding:0}.hero6{background:#fff;color:#000;padding:0}.hero6 p{color:#333}}
+</style></head>
+<body data-til-toppen="">
+<script src="../assets/felles.js"></script>
+<a class="skip" href="#innhold" style="position:absolute;left:-999px">Hopp til innhold</a>
+<header class="topbar"><div class="topbar-inner"><a aria-label="Norsk Økonomi – til hovedsiden" class="brand" href="../index.html"><span aria-hidden="true" class="brand-mark">NØ</span><span class="brand-title">Norsk Økonomi<span class="brand-sub">Delrapport 06B · Kapitalflukt over ti år</span></span></a>
+<button aria-controls="fn-nav" aria-expanded="false" class="fn-knapp fn-meny-knapp" type="button"><span aria-hidden="true">☰</span> Meny</button>
+<nav aria-label="Hovednavigasjon" class="fn-nav" id="fn-nav"><a href="../index.html#utforsk">Start</a><a href="../index.html#figurer">Data</a><a href="../index.html#stresstest">Simuleringer</a><a href="../index.html#hypoteseregister">Hypoteser</a><a href="../index.html#rapport">Rapport</a>
+<details class="fn-del"><summary>Delrapporter</summary><div class="fn-del-liste"><span class="fn-gruppe">Del I · forskningstråder</span><a href="../index.html#kap-16">01 · Metode og evidens</a><a href="../index.html#kap-17">02 · Relativ utvikling og internasjonal sammenlikning</a><a href="../index.html#kap-18">03 · Bolig, kreditt og kapitalallokering</a><a href="../index.html#kap-19">04 · Generasjoner, mobilitet og fordeling</a><a href="../index.html#kap-20">05 · Entreprenørskap og skalering</a><a href="../index.html#kap-21">06 · Skatt, eierskap og utflytting</a><a href="../index.html#kap-22">07 · Offentlig ressursbruk og Baumol</a><a href="../index.html#kap-23">08 · Petroleum, SPU og finanspolitikk</a><a href="../index.html#kap-24">09 · Demografi og arbeidskraft</a><span class="fn-gruppe">Del II</span><a href="../index.html#delrapport-10">10 · Systemdynamikk og vippepunkter</a><a href="../index.html#delrapport-11">11 · Politisk økonomi og insentiver</a><a href="../index.html#delrapport-12">12 · Radikale strukturreformer</a><span class="fn-gruppe">Interaktive delrapporter</span><a href="../delrapport_06B/index.html" aria-current="page">06B · Kapitalflukt og verdiskaping over ti år</a><a href="../delrapport_06C/index.html">06C · Gründer, formuesskatt og utflytting</a></div></details>
+<a href="../index.html#begreper">Begreper</a><a href="../index.html#kap-15">Kilder</a>
+<button aria-pressed="false" class="fn-knapp" id="tema-knapp" type="button">Mørk visning</button></nav></div></header>
+<nav aria-label="Brødsmuler" class="fn-brodsmuler"><a href="../index.html">Norsk Økonomi</a> › <a href="../index.html#rapport">Delrapporter</a> › 06B Kapitalflukt og verdiskaping</nav>
+<header class="hero6"><span class="eyebrow">Forskningsspor 06B · versjon 1.0 · 14. oktober 2026 · forskningsutkast</span><h1>Kapitalflukt og verdiskaping – hva vet vi om effekten over ti år?</h1><p>Skatteutløst utflytting er dokumentert. Den samlede netto kausale tiårseffekten på norsk bruttoprodukt er ikke identifisert. Utforsk to transparente alternative modeller, med tydelig skille mellom observerte tall og antakelser.</p>
+<div class="erklaering"><b>Publiseringsstatus:</b> Forskningsutkast, ikke ekstern fagfellevurdert. Scenarioene er betingede regneeksempler, ikke prognoser.<br/><b>Bruk av KI:</b> Rapporten er utarbeidet med hjelp av store språkmodeller (LLM-basert KI) til kildesøk, syntese, programkode og beregninger. KI er ikke brukt som primærkilde. <a href="#ki">Les mer</a></div></header>
+<div class="layout"><aside aria-label="Innhold i delrapporten" class="sidemeny"><a href="#modeller">Modellverktøy</a><a href="#studien">Forskningsrapport</a><a href="delrapport_06B_kapitalflukt_tiar.md" download="">Markdown</a><a href="scenarioer_10_ar.csv" download="">Scenario-CSV</a><a href="observasjoner_utflytting.csv" download="">Utflytting-CSV</a><a href="kilderegister_06B.json" download="">Kilderegister (JSON)</a><a href="../index.html#kap-tillegg-32">Oppdateringer v3.2</a></aside>
+<main id="innhold"><section class="card" id="modeller"><h2>Tiårsmodeller for norsk verdiskaping <span class="fn-merke d">D – scenario</span></h2>
+<div class="warning"><b>To ALTERNATIVE mekanismer.</b> Modell A overfører en skandinavisk aggregert effekt. Modell B er en hypotetisk beregning av uteblitte nyetableringer. De skal ikke summeres, fordi effektene kan overlappe.</div>
+<div aria-label="Velg modell" class="toolnav" role="tablist"><button aria-controls="pane-a" aria-selected="true" class="fane" id="fane-a" role="tab" type="button">A – Migrasjon / nivåeffekt</button><button aria-controls="pane-b" aria-selected="false" class="fane" id="fane-b" role="tab" type="button">B – Uteblitte gründere</button></div>
+<div aria-labelledby="fane-a" class="tab active" id="pane-a" role="tabpanel"><h3>A. Aggregert effekt: vedvarende nivågap</h3>
+<p>Utgangspunkt: Jakobsen mfl. finner −0,10 % BNP per +1 prosentpoeng i toppsatsen på formuesskatt, gjennom migrasjon [R03]. Overføring til Norge, BNP-grunnlag og skattesats er ikke identifisert som norsk total kausaleffekt.</p>
+<div class="fn-presets" data-gruppe="a" role="group" aria-label="Forhåndsvalg modell A"><span class="fn-presets-tittel">Forhåndsvalg</span>
+<button data-navn="a-rapport" data-standard="" data-verdier="{&quot;gdp&quot;: 4500, &quot;rate&quot;: 0.5, &quot;trans&quot;: 100, &quot;growth&quot;: 2}">Rapportens eksempel (kap. 5)</button>
+<button data-navn="a-toppsats" data-verdier="{&quot;gdp&quot;: 4500, &quot;rate&quot;: 0.25, &quot;trans&quot;: 100, &quot;growth&quot;: 2}">Faktisk toppsats 2022: +0,25 pp</button>
+<button data-navn="a-effektiv" data-verdier="{&quot;gdp&quot;: 4500, &quot;rate&quot;: 0.4, &quot;trans&quot;: 100, &quot;growth&quot;: 2}">Effektiv sats på aksjer: +0,4 pp</button>
+<button data-navn="a-bnp" data-verdier="{&quot;gdp&quot;: 5200, &quot;rate&quot;: 0.5, &quot;trans&quot;: 100, &quot;growth&quot;: 2}">Samlet BNP ≈ 5 200 mrd.</button>
+<button data-navn="a-null" data-verdier="{&quot;gdp&quot;: 4500, &quot;rate&quot;: 0.5, &quot;trans&quot;: 0, &quot;growth&quot;: 2}">Ingen overføring (0 %)</button></div>
+<div class="controls">
+<div class="control"><label for="gdp"><span>BNP-grunnlag, mrd. kr <button class="fn-hjelp" data-hjelp="Hvilket BNP koeffisienten anvendes på. 4 500 mrd. er rapportens regneforutsetning. Samlet BNP 2024 var om lag 5 200 mrd. (932 583 kr per innbygger, SSB); Fastlands-BNP er lavere." data-hjelp-meta="Klasse D · regneforutsetning" data-hjelp-tittel="BNP-grunnlag" type="button">?</button></span><output id="gdpv"></output></label><input data-url="bnp" id="gdp" max="6000" min="3000" step="100" type="range" value="4500"/><div class="axis-labels"><span>3 000</span><span>6 000</span></div></div>
+<div class="control"><label for="rate"><span>Hypotetisk endring i toppsats, prosentpoeng <button class="fn-hjelp" data-hjelp="Reformen i 2022 hevet satsen fra 0,85 % til 0,95 %, og 1,1 % over 20 mill. kr: +0,1 til +0,25 pp. Samtidig ble aksjerabatten redusert fra 45 % til 25 %, slik at effektiv sats på aksjeverdi i toppen steg om lag 0,4 pp (0,47 % → 0,88 %)." data-hjelp-meta="Klasse A for satsene · Stortingets utredningsnotat 2024/150" data-hjelp-tittel="Endring i toppsats" type="button">?</button></span><output id="ratev"></output></label><input data-url="pp" id="rate" max="1" min="0" step="0.05" type="range" value="0.5"/><div class="axis-labels"><span>0</span><span>1 pp</span></div></div>
+<div class="control"><label for="trans"><span>Overførbarhet av koeffisienten, % <button class="fn-hjelp" data-hjelp="Hvor stor del av den skandinaviske effekten som antas å gjelde Norge. 100 % = full overføring, 0 % = ingen effekt, over 100 % = sterkere effekt enn i studien." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Overførbarhet" type="button">?</button></span><output id="transv"></output></label><input data-url="ov" id="trans" max="150" min="0" step="5" type="range" value="100"/><div class="axis-labels"><span>0 %</span><span>150 %</span></div></div>
+<div class="control"><label for="growth"><span>Nominell BNP-vekst i referansebanen, %/år <button class="fn-hjelp" data-hjelp="Hvor raskt BNP-grunnlaget vokser. Nivågapet er en fast prosent av BNP, så det vokser i kroner med BNP. Ingen ekstra vekstbrems legges til." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Nominell BNP-vekst" type="button">?</button></span><output id="growthv"></output></label><input data-url="vekst" id="growth" max="5" min="0" step="0.25" type="range" value="2"/><div class="axis-labels"><span>0 %</span><span>5 %</span></div></div>
+</div>
+<div class="outcomes"><div class="outcome"><small>Gap første år</small><strong id="a-first"></strong></div><div class="outcome"><small>Gap år 10</small><strong id="a-last"></strong></div><div class="outcome"><small>Summert BNP-gap, 10 år</small><strong id="a-sum"></strong></div></div></div>
+<div aria-labelledby="fane-b" class="tab" hidden="" id="pane-b" role="tabpanel"><h3>B. Uteblitt norsk gründeraktivitet</h3>
+<p>Antall skatteutløste nyetableringer <b>er ikke kjent</b>. Rings kausalstudie finner ingen signifikant generell gründerutflytting [R02]. Test derfor både null og alternative hypotetiske tall.</p>
+<div class="fn-presets" data-gruppe="b" role="group" aria-label="Forhåndsvalg modell B"><span class="fn-presets-tittel">Forhåndsvalg</span>
+<button data-navn="b-rapport" data-standard="" data-verdier="{&quot;startup&quot;: 5, &quot;output&quot;: 10, &quot;survival&quot;: 85, &quot;grow&quot;: 8, &quot;replace&quot;: 50}">Rapportens eksempel (kap. 6)</button>
+<button data-navn="b-null" data-verdier="{&quot;startup&quot;: 0, &quot;output&quot;: 10, &quot;survival&quot;: 85, &quot;grow&quot;: 8, &quot;replace&quot;: 50}">Rings nullfunn (0 tapte)</button>
+<button data-navn="b-lav" data-verdier="{&quot;startup&quot;: 2, &quot;output&quot;: 3, &quot;survival&quot;: 75, &quot;grow&quot;: 5, &quot;replace&quot;: 70}">Lavt scenario</button>
+<button data-navn="b-hoy" data-verdier="{&quot;startup&quot;: 15, &quot;output&quot;: 15, &quot;survival&quot;: 90, &quot;grow&quot;: 12, &quot;replace&quot;: 30}">Høyt scenario</button></div>
+<div class="controls">
+<div class="control"><label for="startup"><span>Tapte oppstarter per år <button class="fn-hjelp" data-hjelp="Antall norske selskaper per år som antas ikke å bli startet på grunn av skatt. Er ikke funnet i registerdata; 0 er en reell mulighet." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Tapte oppstarter" type="button">?</button></span><output id="startupv"></output></label><input data-url="n" id="startup" max="30" min="0" step="1" type="range" value="5"/><div class="axis-labels"><span>0</span><span>30</span></div></div>
+<div class="control"><label for="output"><span>Bruttoprodukt per selskap første driftsår, mill. kr <button class="fn-hjelp" data-hjelp="Verdiskaping (lønn + driftsresultat) det første året etter stiftelse. 10 mill. kr er høyt for en typisk nyetablering og passer best for vekstselskaper." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Bruttoprodukt per selskap" type="button">?</button></span><output id="outputv"></output></label><input data-url="bp" id="output" max="30" min="1" step="1" type="range" value="10"/><div class="axis-labels"><span>1</span><span>30</span></div></div>
+<div class="control"><label for="survival"><span>Årlig overlevelse, % <button class="fn-hjelp" data-hjelp="Andel selskaper som fortsatt er i drift året etter." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Overlevelse" type="button">?</button></span><output id="survivalv"></output></label><input data-url="sv" id="survival" max="100" min="40" step="5" type="range" value="85"/><div class="axis-labels"><span>40 %</span><span>100 %</span></div></div>
+<div class="control"><label for="grow"><span>Årlig vekst blant overlevende, % <button class="fn-hjelp" data-hjelp="Årlig vekst i bruttoprodukt for selskapene som overlever." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Vekst" type="button">?</button></span><output id="growv"></output></label><input data-url="gv" id="grow" max="20" min="0" step="1" type="range" value="8"/><div class="axis-labels"><span>0 %</span><span>20 %</span></div></div>
+<div class="control"><label for="replace"><span>Aktivitet erstattet av andre norske foretak, % <button class="fn-hjelp" data-hjelp="Andel av produksjonen andre norske foretak antas å ta over når en oppstart uteblir. 50 % betyr at bare halvparten er et reelt tap for norsk BNP." data-hjelp-meta="Klasse D · antakelse" data-hjelp-tittel="Erstatning" type="button">?</button></span><output id="replacev"></output></label><input data-url="er" id="replace" max="100" min="0" step="5" type="range" value="50"/><div class="axis-labels"><span>0 %</span><span>100 %</span></div></div>
+</div>
+<div class="outcomes"><div class="outcome"><small>Gap år 10</small><strong id="b-last"></strong></div><div class="outcome"><small>Sum BNP-gap over ti år</small><strong id="b-sum"></strong></div><div class="outcome"><small>Modellstatus</small><strong style="font-size:18px">Hypotetisk</strong></div></div>
+<p class="note">Kohortene gir produksjon fra året etter stiftelse, derfor er år 1 null.</p></div>
+<div id="chart"></div>
+<div class="knapperad"><button class="fn-knapp" id="csv" type="button">Eksporter gjeldende modell som CSV</button><button class="fn-knapp" data-kopier-lenke="" type="button">Kopier lenke til scenario</button></div>
+<p class="note">Resultatene er årlige tap i norsk bruttoprodukt, ikke tapte selskapsverdier eller skatteinntekter. Ingen separat årlig vekststraff legges til en allerede aggregert nivåkoeffisient.</p></section><section class="card" id="studien"><article><h2 class="dok-tittel">Delrapport 06B - Formuesskatt, utflytting og verdiskaping over ti år</h2>
 <p><strong>Formål.</strong> Undersøke om norske skatteendringer i 2021 - 2024 har påvirket utflytting, etablering, investering og innenlandsk bruttoprodukt, og beregne tiårige <em>betingede scenarioer</em> uten å forveksle dem med identifiserte kausale resultater.</p>
 <p><strong>Kort konklusjon.</strong> Skattedrevet utflytting blant svært formuende er empirisk påvist. Et norsk registerarbeid dokumenterer ingen statistisk signifikant effekt på utvandring av gründere/oppfinnere før rikdom, eller på investering i de undersøkte norskeide foretakene. Det finnes en identifisert skandinavisk gjennomsnittseffekt på verdiskaping via utflytting, men <strong>ingen etterprøvbar samlet netto kausal tiårseffekt i milliarder kroner for de norske reformene 2021 - 2024</strong>. Derfor leverer dette arbeidet gjennomsiktige stresstester med tydelig uidentifiserte parametere og en konkret plan for å lukke datagapet. [R02] [R03]</p>
 <h2>1. Resultatene fra fornyet datainnhenting</h2>
 <table>
-<thead>
+<th scope="col"ead>
 <tr>
-<th>Databehov</th>
-<th>Nytt resultat</th>
-<th>Evidensnivå / usikkerhet</th>
+<th scope="col">Databehov</th>
+<th scope="col">Nytt resultat</th>
+<th scope="col">Evidensnivå / usikkerhet</th>
 </tr>
 </thead>
 <tbody>
@@ -64,13 +133,13 @@ status: &quot;Forskningsutkast, scenarioestimater; ikke norsk total kausalestime
 <p>Studier av en norsk kapitalkravsreform tyder på at etableringsbarrierer kan ha store realøkonomiske konsekvenser. Resultatet identifiserer imidlertid <strong>kapitalkrav</strong>, ikke <strong>formuesskatt</strong>, og kan ikke overføres som koeffisient. [R06]</p>
 <h2>2. Offisielt tellegrunnlag, 2021 - 2025</h2>
 <table>
-<thead>
+<th scope="col"ead>
 <tr>
-<th>År</th>
-<th style="text-align:right">Utflyttede svært formuende</th>
-<th style="text-align:right">Innflyttede svært formuende</th>
-<th style="text-align:right">Netto</th>
-<th style="text-align:right">Formuesskatt året før, mill. kr</th>
+<th scope="col">År</th>
+<th scope="col" style="text-align:right">Utflyttede svært formuende</th>
+<th scope="col" style="text-align:right">Innflyttede svært formuende</th>
+<th scope="col" style="text-align:right">Netto</th>
+<th scope="col" style="text-align:right">Formuesskatt året før, mill. kr</th>
 </tr>
 </thead>
 <tbody>
@@ -134,7 +203,7 @@ status: &quot;Forskningsutkast, scenarioestimater; ikke norsk total kausalestime
 <p>Dette er <strong>ikke</strong> en konklusjon om at Norge tapte 24,6 mrd. kr på grunn av formuesskatt, men et stresstestpunkt. Effekten gjelder kun dersom de skandinaviske estimatene kan overføres, den hypotetiske skatteendringen er relevant, effekten allerede slår fullt ut i første år, og nivåforskjellen vedvarer. Dersom nivåeffekten bygges opp gradvis, blir tiårsbeløpet mindre. Hvis utviklingen avvikler seg, kan beløpet bli null. En egen vekstbrems er ikke lagt til fordi den ikke er identifisert.</p>
 <h2>6. Tiårsanslag B: uteblitte etableringer (alternativ mekanisme)</h2>
 <p>En separat, eksplisitt <strong>ikke-empirisk</strong> modell antar at fem ekstra oppstarter per år uteblir pga. skatter, at hver ville ha skapt 10 mill. kr i årlig bruttoprodukt fra året etter stiftelse, 85 % årlig overlevelse, 8 % årlig produksjonsvekst blant overlevende og 50 % netto erstatning av samme aktivitet i Norge. Kohortene akkumuleres gjennom ti år.</p>
-<p>Under disse forutsetningene blir tiårs summert BNP-gap omtrent 911.1 mill. kroner og gapet i tiende år omtrent 163.7 mill. kroner. <strong>Antallet fem skatteutløste oppstarter er ikke funnet i norske registerdata; Rings nullfunn er en sentral motvekt.</strong> Dette anslaget kan ikke legges til resultatet i kapittel 5 fordi de samme entreprenør- og bedriftsvirkningene kan være inkludert i den aggregerte koeffisienten. [R02]</p>
+<p>Under disse forutsetningene blir tiårs summert BNP-gap omtrent 911,1 mill. kroner og gapet i tiende år omtrent 163,7 mill. kroner. <strong>Antallet fem skatteutløste oppstarter er ikke funnet i norske registerdata; Rings nullfunn er en sentral motvekt.</strong> Dette anslaget kan ikke legges til resultatet i kapittel 5 fordi de samme entreprenør- og bedriftsvirkningene kan være inkludert i den aggregerte koeffisienten. [R02]</p>
 <h2>7. Hvorfor formuesskatteprovenyet må skilles ut</h2>
 <p>Finansdepartementet anslo ca. 34 mrd. kr i samlet formuesskatteproveny i 2025. Tallet inkluderer <strong>alle</strong> skattytere og er ikke netto merproveny fra 2021 - 2024-reformene. [R08] Et naivt tall som 34 × 10 = 340 mrd. kr beskriver verken reformgevinsten eller en kontrafaktisk skattebane. Et netto proveny må beregnes per år mot samme referanseregel og med endret flytting, skattebase og annen beskatning.</p>
 <p>Til sammenlikning finner Ring at den beregnede økningen i formuesskatteproveny 2021 - 2024 ville vært 75 % uten reformdrevet utflytting og 71,5 % med slik utflytting. Forskjellen på 3,5 prosentpoeng er <strong>ikke</strong> lik 3,5 % av 2025-provenyet; dette er prosentpoeng av veksten fra 2021-basisen i hans modell. [R02]</p>
@@ -155,12 +224,12 @@ status: &quot;Forskningsutkast, scenarioestimater; ikke norsk total kausalestime
 <p><strong>Tilgang:</strong> Åpent publiserte aggregerte tall gir ikke identifiserbar person - bedriftskobling; forskertilgang/personvern og langtidsoppfølging kreves. 2031 er dessuten fremtidig og kan bare modelleres nå, ikke observeres.</p>
 <h2>10. Oppsummerende evidensregister</h2>
 <table>
-<thead>
+<th scope="col"ead>
 <tr>
-<th>Påstand</th>
-<th>Kategori</th>
-<th>Kildedekning</th>
-<th>Faglig status</th>
+<th scope="col">Påstand</th>
+<th scope="col">Kategori</th>
+<th scope="col">Kildedekning</th>
+<th scope="col">Faglig status</th>
 </tr>
 </thead>
 <tbody>
@@ -214,23 +283,70 @@ status: &quot;Forskningsutkast, scenarioestimater; ikke norsk total kausalestime
 </tr>
 </tbody>
 </table>
-<h2>11. KI, interesseavklaring og metodebegrensninger</h2>
+<h2 id="ki">11. KI, interesseavklaring og metodebegrensninger</h2>
 <p>Rapporten er utarbeidet med hjelp fra GPT-6 (OpenAI) til kildesøk, forskningsoppsett, syntese, programkode og mekaniske beregninger. Prosjektet har også brukt andre KI-systemer i tidligere deler; eksakte modeller og versjoner for hver tidligere del må dokumenteres i hovedprosjektets KI-logg. Ingen KI-output regnes som primærkilde. Denne utgaven er ikke eksternt fagfellevurdert, og ingen taushetsbelagte norske mikrodata eller egne regresjoner er brukt. En mekanisk scenarioberegning er ikke et kausalt estimat. Faktiske tall, kildebetingede estimater og hypoteser er merket eksplisitt.</p>
 <h2>Kilder</h2>
 <ul>
-<li><strong>[R01]</strong> NOU 2026:9, kapittel 3.2 - 3.4. Høyt formuende; registrerte flyttinger, innflyttinger, latent gevinst; ikke kausalt. https://www.regjeringen.no/no/dokumenter/nou-2026-9/id3167167/?ch=4</li>
-<li><strong>[R02]</strong> Marius Ring, Taxing Entrepreneurial Wealth (NBER 35854, okt. 2026). Kausal design reformeksponering; maksimalt ca 100 skattedrevne utflyttere; ingen påvist gründer-/oppfinnerflukt eller investeringsnedgang. https://www.nber.org/papers/w35854</li>
-<li><strong>[R03]</strong> Jakobsen mfl., Taxing Top Wealth (NBER 32153, rev. jan. 2026). Skandinavia: +1 pp toppsats knyttet til -2 % rik-bestand, -0,10 % bruttoprodukt, -0,07 % investering og -0,02 % sysselsetting via mobilitet. https://www.nber.org/papers/w32153</li>
-<li><strong>[R04]</strong> Fagereng, Guiso &amp; Ring (NBER 35262, 2026). Langsomme porteføljetilpasninger til skatteinduserte endringer i aksjepremie; ikke målt norsk BNP-effekt. https://www.nber.org/papers/w35262</li>
-<li><strong>[R05]</strong> Ring, Entrepreneurial Wealth and Employment (Journal of Finance 2023). Eksogene gründersjokk påvirker unge foretaks kapital, investering og ansettelser; ikke utflyttingseffekt. https://doi.org/10.1111/jofi.13280</li>
-<li><strong>[R06]</strong> Bacher mfl., Regulating Entrepreneurship (NBER 35780, 2026). 70 % lavere kapitalkrav ga nær dobling i inngang; ikke en formuesskatt-effekt. https://www.nber.org/papers/w35780</li>
-<li><strong>[R07]</strong> SSB, Flyttinger, statistikk 13. mars 2026. Norske statsborgeres og alle borgeres flyttinger; ikke skatteårsaksregistrering. https://www.ssb.no/befolkning/flytting/statistikk/flyttinger</li>
-<li><strong>[R08]</strong> Finansdepartementet Prop. 1 LS (2025 - 2026), formuesskatt. Anslo ca 34 mrd. kr i proveny 2025; ikke effekten av reform 2022 - 25. https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20252026/id3124192/?ch=2</li>
-<li><strong>[R09]</strong> Skatteetaten, skattemessig emigrasjon. Registrert utflytting og skattemessig emigrasjon er forskjellige. https://www.skatteetaten.no/en/person/taxes/get-the-taxes-right/abroad/tax-emigration/</li>
-<li><strong>[R10]</strong> Iacono mfl., Behavioural responses to wealth taxation (Fiscal Studies 2026). Bø kommunesats; betydelig intern flytterespons; kan ikke tolkes som nasjonal netto kapitalflukt. https://onlinelibrary.wiley.com/doi/full/10.1111/1475-5890.70024</li>
-<li><strong>[R11]</strong> NOU 2022:20, skatt og utflytting. Historisk utvalg, annen definisjon; viste betydelig innflyttet formue før 2022. https://www.regjeringen.no/no/dokumenter/nou-2022-20/id2951826/?ch=11</li>
-<li><strong>[R12]</strong> Ring, Wealth Taxation and Household Saving (Review of Economic Studies 2025). Sparing kan respondere ulikt, ikke gitt entydig negativ effekt. https://academic.oup.com/restud/article-abstract/92/5/3375/7822152</li>
+<li><strong>[R01]</strong> NOU 2026:9, kapittel 3.2 - 3.4. Høyt formuende; registrerte flyttinger, innflyttinger, latent gevinst; ikke kausalt. <a href="https://www.regjeringen.no/no/dokumenter/nou-2026-9/id3167167/?ch=4" rel="noopener noreferrer" target="_blank">https://www.regjeringen.no/no/dokumenter/nou-2026-9/id3167167/?ch=4</a></li>
+<li><strong>[R02]</strong> Marius Ring, Taxing Entrepreneurial Wealth (NBER 35854, okt. 2026). Kausal design reformeksponering; maksimalt ca 100 skattedrevne utflyttere; ingen påvist gründer-/oppfinnerflukt eller investeringsnedgang. <a href="https://www.nber.org/papers/w35854" rel="noopener noreferrer" target="_blank">https://www.nber.org/papers/w35854</a></li>
+<li><strong>[R03]</strong> Jakobsen mfl., Taxing Top Wealth (NBER 32153, rev. jan. 2026). Skandinavia: +1 pp toppsats knyttet til -2 % rik-bestand, -0,10 % bruttoprodukt, -0,07 % investering og -0,02 % sysselsetting via mobilitet. <a href="https://www.nber.org/papers/w32153" rel="noopener noreferrer" target="_blank">https://www.nber.org/papers/w32153</a></li>
+<li><strong>[R04]</strong> Fagereng, Guiso &amp; Ring (NBER 35262, 2026). Langsomme porteføljetilpasninger til skatteinduserte endringer i aksjepremie; ikke målt norsk BNP-effekt. <a href="https://www.nber.org/papers/w35262" rel="noopener noreferrer" target="_blank">https://www.nber.org/papers/w35262</a></li>
+<li><strong>[R05]</strong> Ring, Entrepreneurial Wealth and Employment (Journal of Finance 2023). Eksogene gründersjokk påvirker unge foretaks kapital, investering og ansettelser; ikke utflyttingseffekt. <a href="https://doi.org/10.1111/jofi.13280" rel="noopener noreferrer" target="_blank">https://doi.org/10.1111/jofi.13280</a></li>
+<li><strong>[R06]</strong> Bacher mfl., Regulating Entrepreneurship (NBER 35780, 2026). 70 % lavere kapitalkrav ga nær dobling i inngang; ikke en formuesskatt-effekt. <a href="https://www.nber.org/papers/w35780" rel="noopener noreferrer" target="_blank">https://www.nber.org/papers/w35780</a></li>
+<li><strong>[R07]</strong> SSB, Flyttinger, statistikk 13. mars 2026. Norske statsborgeres og alle borgeres flyttinger; ikke skatteårsaksregistrering. <a href="https://www.ssb.no/befolkning/flytting/statistikk/flyttinger" rel="noopener noreferrer" target="_blank">https://www.ssb.no/befolkning/flytting/statistikk/flyttinger</a></li>
+<li><strong>[R08]</strong> Finansdepartementet Prop. 1 LS (2025 - 2026), formuesskatt. Anslo ca 34 mrd. kr i proveny 2025; ikke effekten av reform 2022 - 25. <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20252026/id3124192/?ch=2" rel="noopener noreferrer" target="_blank">https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20252026/id3124192/?ch=2</a></li>
+<li><strong>[R09]</strong> Skatteetaten, skattemessig emigrasjon. Registrert utflytting og skattemessig emigrasjon er forskjellige. <a href="https://www.skatteetaten.no/en/person/taxes/get-the-taxes-right/abroad/tax-emigration/" rel="noopener noreferrer" target="_blank">https://www.skatteetaten.no/en/person/taxes/get-the-taxes-right/abroad/tax-emigration/</a></li>
+<li><strong>[R10]</strong> Iacono mfl., Behavioural responses to wealth taxation (Fiscal Studies 2026). Bø kommunesats; betydelig intern flytterespons; kan ikke tolkes som nasjonal netto kapitalflukt. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1475-5890.70024" rel="noopener noreferrer" target="_blank">https://onlinelibrary.wiley.com/doi/full/10.1111/1475-5890.70024</a></li>
+<li><strong>[R11]</strong> NOU 2022:20, skatt og utflytting. Historisk utvalg, annen definisjon; viste betydelig innflyttet formue før 2022. <a href="https://www.regjeringen.no/no/dokumenter/nou-2022-20/id2951826/?ch=11" rel="noopener noreferrer" target="_blank">https://www.regjeringen.no/no/dokumenter/nou-2022-20/id2951826/?ch=11</a></li>
+<li><strong>[R12]</strong> Ring, Wealth Taxation and Household Saving (Review of Economic Studies 2025). Sparing kan respondere ulikt, ikke gitt entydig negativ effekt. <a href="https://academic.oup.com/restud/article-abstract/92/5/3375/7822152" rel="noopener noreferrer" target="_blank">https://academic.oup.com/restud/article-abstract/92/5/3375/7822152</a></li>
 </ul>
-</article></section></main></div><script>
-let mode='a',rows=[];const x=id=>document.getElementById(id);const val=id=>+x(id).value;const fmt=(n,d=2)=>n.toLocaleString('nb-NO',{maximumFractionDigits:d});function choose(m){mode=m;x('pane-a').classList.toggle('active',m==='a');x('pane-b').classList.toggle('active',m==='b');update()}
-function update(){for(const id of ['gdp','rate','trans','growth','startup','output','survival','grow','replace'])x(id+'v').textContent=fmt(val(id));rows=[];let acc=0;for(let t=1;t<=10;t++){let loss;if(mode==='a'){loss=val('gdp')*(val('rate')/1000)*(val('trans')/100)*Math.pow(1+val('growth')/100,t-1);}else{loss=0;for(let k=1;k<t;k++)loss+=val('startup')*val('output')*Math.pow(val('survival')/100*(1+val('grow')/100),t-k-1)*(1-val('replace')/100)/1000;}acc+=loss;rows.push({t,loss,acc})}if(mode==='a'){x('a-first').textContent=fmt(rows[0].loss)+' mrd.';x('a-last').textContent=fmt(rows[9].loss)+' mrd.';x('a-sum').textContent=fmt(acc)+' mrd.'}else{x('b-last').textContent=fmt(rows[9].loss)+' mrd.';x('b-sum').textContent=fmt(acc)+' mrd.'}let max=Math.max(...rows.map(r=>r.loss),.001);let bars=rows.map((r,i)=>{let h=r.loss/max*145,y=170-h;return `<rect x="${54+i*53}" y="${y}" width="29" height="${h}" fill="#117885" rx="3"><title>År ${r.t}: ${fmt(r.loss,3)} mrd.</title></rect><text x="${68+i*53}" y="188" text-anchor="middle" fill="#58717a" font-size="11">${r.t}</text>`}).join('');x('chart').innerHTML=`<svg viewBox="0 0 600 210" role="img" aria-label="Årlig modellert BNP-gap i mrd. kr år 1–10"><line x1="45" y1="170" x2="595" y2="170" stroke="#a6b9c1"/>${bars}</svg><small>Årlig BNP-gap i milliarder kroner; år 1–10.</small>`}function exportCSV(){const s='År;Årlig gap mrd NOK;Akkumulert mrd NOK\n'+rows.map(r=>[r.t,r.loss.toFixed(5),r.acc.toFixed(5)].join(';')).join('\n');let a=document.createElement('a');let u=URL.createObjectURL(new Blob([s],{type:'text/csv;charset=utf-8'}));a.href=u;a.download='delrapport06B_'+mode+'_scenario.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}document.querySelectorAll('input[type=range]').forEach(e=>e.addEventListener('input',update));update();</script></body></html>
+</article></section></main></div>
+<footer style="max-width:1270px;margin:20px auto 40px;padding:0 20px;color:var(--muted);font-size:12px">Norsk Økonomi · delrapport 06B · del av forskningsutgave 3.2 (23. oktober 2026) · <a href="../index.html">Til hovedsiden</a></footer>
+<script>
+'use strict';
+let mode='a',rows=[];
+const x=id=>document.getElementById(id);const val=id=>+x(id).value;
+const fmt=(n,d=2)=>n.toLocaleString('nb-NO',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmtv=(n)=>n.toLocaleString('nb-NO',{maximumFractionDigits:2});
+const START=2022;
+function choose(m){mode=m;
+ for(const k of ['a','b']){const on=k===m;x('pane-'+k).hidden=!on;x('pane-'+k).classList.toggle('active',on);x('fane-'+k).setAttribute('aria-selected',String(on));}
+ update();}
+x('fane-a').addEventListener('click',()=>choose('a'));x('fane-b').addEventListener('click',()=>choose('b'));
+function update(){
+ const fmtMap={gdp:v=>fmtv(v)+' mrd.',rate:v=>fmtv(v)+' pp',trans:v=>v+' %',growth:v=>fmtv(v)+' %',startup:v=>String(v),output:v=>v+' mill.',survival:v=>v+' %',grow:v=>v+' %',replace:v=>v+' %'};
+ for(const id in fmtMap)x(id+'v').textContent=fmtMap[id](val(id));
+ rows=[];let acc=0;
+ for(let t=1;t<=10;t++){let loss;
+  if(mode==='a'){loss=val('gdp')*(val('rate')/1000)*(val('trans')/100)*Math.pow(1+val('growth')/100,t-1)*1000;}
+  else{loss=0;for(let k=1;k<t;k++)loss+=val('startup')*val('output')*Math.pow(val('survival')/100*(1+val('grow')/100),t-k-1)*(1-val('replace')/100);}
+  acc+=loss;rows.push({t,aar:START+t-1,loss,acc});}
+ // loss er i mill. kr for begge modeller
+ const vis=(v)=>mode==='a'?fmt(v/1000,2)+' mrd. kr':fmt(v,1)+' mill. kr';
+ if(mode==='a'){x('a-first').textContent=vis(rows[0].loss);x('a-last').textContent=vis(rows[9].loss);x('a-sum').textContent=vis(acc);}
+ else{x('b-last').textContent=vis(rows[9].loss);x('b-sum').textContent=vis(acc);}
+ tegn();
+}
+function tegn(){
+ const enhet=mode==='a'?'mrd. kr':'mill. kr',div=mode==='a'?1000:1;
+ const vals=rows.map(r=>r.loss/div);const raw=Math.max(...vals,0.001)/4;const mag=Math.pow(10,Math.floor(Math.log10(raw)));const step=[1,2,2.5,5,10].map(k=>k*mag).find(k=>k>=raw);const max=step*4;
+ const L=64,W=600,H=230,T=18,B=40,inner=H-T-B,col=(W-L-12)/10,bw=Math.min(30,col*.6);
+ let g='';
+ for(let j=0;j<=4;j++){const v=max*j/4,y=T+inner-inner*j/4;g+=`<line x1="${L}" x2="${W-6}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${L-8}" y="${y+4}" text-anchor="end" font-size="10.5" fill="var(--muted)">${v.toLocaleString('nb-NO',{maximumFractionDigits:step<1?2:(step<10?1:0)})}</text>`;}
+ rows.forEach((r,i)=>{const v=vals[i],h=v/max*inner,xx=L+i*col+(col-bw)/2,y=T+inner-h;
+  g+=`<rect x="${xx}" y="${y}" width="${bw}" height="${Math.max(h,0)}" fill="var(--main)" rx="3"><title>År ${r.t} (${r.aar}): ${fmt(v,mode==='a'?2:1)} ${enhet}</title></rect><text x="${xx+bw/2}" y="${H-22}" text-anchor="middle" fill="var(--muted)" font-size="11">${r.t}</text><text x="${xx+bw/2}" y="${H-8}" text-anchor="middle" fill="var(--muted)" font-size="9.5">${r.aar}</text>`;});
+ x('chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Årlig modellert BNP-gap i ${enhet}, år 1–10"><text x="${L}" y="11" font-size="10.5" fill="var(--muted)">Årlig BNP-gap, ${enhet}</text>${g}<line x1="${L}" y1="${T+inner}" x2="${W-6}" y2="${T+inner}" stroke="var(--muted)"/></svg>`;
+}
+x('csv').addEventListener('click',()=>{
+ const d=mode==='a'?1000:1,enh=mode==='a'?'mrd NOK':'mill NOK';
+ const tall=v=>(v/d).toFixed(5).replace('.',',');
+ const s='﻿'+'Modellår;Kalenderår;Årlig gap '+enh+';Akkumulert '+enh+'\r\n'+rows.map(r=>[r.t,r.aar,tall(r.loss),tall(r.acc)].join(';')).join('\r\n')+'\r\n';
+ const a=document.createElement('a');const u=URL.createObjectURL(new Blob([s],{type:'text/csv;charset=utf-8'}));a.href=u;a.download='delrapport06B_'+mode+'_scenario.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);
+});
+document.querySelectorAll('input[type=range]').forEach(e=>e.addEventListener('input',update));
+// Åpne modell B direkte når et B-forhåndsvalg eller B-parameter er i adressen
+(function(){const q=new URLSearchParams(location.search);const p=q.get('preset')||'';if(p.startsWith('b-')||['n','bp','sv','gv','er'].some(k=>q.has(k))){mode='b';}})();
+document.querySelectorAll('.fn-presets[data-gruppe="b"] button').forEach(b=>b.addEventListener('click',()=>{if(mode!=='b')choose('b');}));
+document.querySelectorAll('.fn-presets[data-gruppe="a"] button').forEach(b=>b.addEventListener('click',()=>{if(mode!=='a')choose('a');}));
+choose(mode);
+</script></body></html>
