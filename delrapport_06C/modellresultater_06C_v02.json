@@ -1,0 +1,14 @@
+{
+  "type": "scenario_D",
+  "report": "06C v0.2",
+  "tax_rules_year": 2026,
+  "not_individual_advice": true,
+  "internal_tests": 31,
+  "wealth_tax_total_10_years": 433008,
+  "unfunded_private_liquidity_total": 293888,
+  "pv_stay": 7898050,
+  "pv_move_at_20_percent_foreign": 5605035,
+  "pv_wealth_stay": 706246,
+  "parity_foreign_capital_gain_rate": 0.3773669446459829,
+  "current_law_vs_hypotheticals": "NOU and foreign tax assumptions are not enacted Norwegian or foreign rules"
+}

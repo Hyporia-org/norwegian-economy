@@ -63,3 +63,15 @@ Det er kontrollert at registrene kan leses, at ID-er er unike *innen hvert spor*
 ## 6. Bruk av KI
 
 Flere AI-verktøy og modeller kan inngå i forskningsprogrammets opprinnelige prosess, slik originalenes KI-erklæringer beskriver. Denne sammenstillingen er gjennomført med OpenAI ChatGPT til organisering, skriving av syntese, maskinell konsistenskontroll og pakking. KI har ikke utført uavhengig fagfellevurdering, verifisert alle primærkilder eller validert kausalestimatene. Endelig faglig ansvar og godkjenning må ligge hos navngitte menneskelige forfattere/fagkontrollører.
+
+## 7. Integrasjon av delrapport 06C (23. oktober 2026)
+
+**Omfang:** Nytt selvstendig mikroscenariokapittel om eierbeskatning av norske unoterte aksjer, kapitalbinding, emisjoner og hypotetiske utflyttingsalternativer. Tillegget utvider forskningstråd 05/06 og utfyller 06B; det erstatter ikke noen av 06Bs kausale forbehold.
+
+**Replikasjon:** `delrapport_06C/modell_06C.py` og `delrapport_06C/modell_06C_utvidet.py` har henholdsvis 20 og 31 interne konsistenskontroller. De genererer åtte CSV-filer og et maskinlesbart sammendrag. `delrapport_06C/SHA256SUMS.txt` inneholder integritetsverdier for GitHub-innholdet. Sjekksummer kan avvike ved lokal linjeskiftkonvertering; kjør i et miljø med LF.
+
+**Dokumentasjonsstatus:** A = dokumenterte regler fra offisielle rettskilder (tolkningen må kontrolleres av fagperson); D = illustrasjoner, nåverdier og scenarioer. Ingen observert individuell investeringsrespons eller norsk samlet kausaleffekt er beregnet. Den hypotetiske utenlandske beskatningen representerer ikke et identifisert land. `kilderegister_06C.json` skiller forslag fra gjeldende rett og logger en kildekonflikt om ikrafttredelsesår for formuesskatteutsettelse (2025/2026).
+
+**Åpen kvalitetssikringsoppgave:** Verifiser rettsforståelsen mot full lovtekst og individuell skatteposisjon; dobbeltsjekk datakilder for satser og tidsgrenser; gjennomfør uavhengig reproduksjon og ekstern skattejuridisk og samfunnsøkonomisk vurdering før vitenskapelig sluttpublisering. Unngå å oversette likviditetsgap i D-modellen til anslått tap av investeringer, sysselsetting eller BNP uten kausal identifikasjon.
+
+**KI-bruk:** OpenAI ChatGPT GPT-6 har bistått med utforming av rapport, beregningskode, kontrolltester, kildekatalog og GitHub-integrasjon; dette er ikke en uavhengig fagfellevurdering.

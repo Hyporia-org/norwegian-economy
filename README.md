@@ -9,6 +9,10 @@ Avsluttende konklusjon er lagt til som siste kapittel i Markdown og nettside. In
 
 [Les delrapport 06B](delrapport_06B/delrapport_06B_kapitalflukt_tiar.md) om formuesskatt, utflytting og verdiskaping over ti år, eller åpne [den interaktive HTML-utgaven](delrapport_06B/index.html). [Kilderegister](delrapport_06B/kilderegister_06B.json), [observasjoner](delrapport_06B/observasjoner_utflytting.csv) og [tiårsscenarioer](delrapport_06B/scenarioer_10_ar.csv) følger med. Scenarioene bygger på antakelser og er ikke samlede norske kausalestimater.
 
+## Ny delrapport 06C – Gründerens skatt, emisjoner og utflytting
+
+[Les delrapport 06C](delrapport_06C/delrapport_06C_grunder_formuesskatt_utflytting_2026.md): et mikroperspektiv på personlige skatter for eiere av unoterte vekstselskaper, bundet varelager, kapitalinnhenting og utflyttingsskatt. [Interaktiv kalkulator](delrapport_06C/index.html), [kilderegister](delrapport_06C/kilderegister_06C.json), [Python-modeller](delrapport_06C/modell_06C_utvidet.py), [scenariodata og replikasjonsveiledning](delrapport_06C/LES_MEG.md) følger med. Modellen inneholder 20 + 31 interne konsistenskontroller. Alle tall om flyttealternativer er betingede scenarioer (D), ikke estimater for konkrete land, gründere eller nasjonale kausale effekter. Forskningsutkast, ikke fagfellevurdert.
+
 ---
 
 # Norsk Økonomi 2026
