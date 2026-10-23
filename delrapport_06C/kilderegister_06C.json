@@ -1,0 +1,257 @@
+{
+  "project": "Hyporia – Norsk Økonomi",
+  "subreport": "06C",
+  "date_checked": "2026-10-22",
+  "regime": "2026 vedtatt regelverk med eksplisitt unntak for foreslåtte 2027-regler",
+  "source_kind": "Offentlige primærkilder",
+  "ai_assistance": "OpenAI ChatGPT GPT-6, med kildegjennomgang, tekst og scenariokode",
+  "evidence": [
+    "A: Offentlig regelgrunnlag",
+    "D: Betingede modeller, ingen kausalestimat"
+  ],
+  "sources": [
+    {
+      "id": "K06C-01",
+      "issuer": "Skatteetaten",
+      "title": "Forskuddsutskrivingen 2026",
+      "url": "https://www.skatteetaten.no/rettskilder/type/uttalelser/uttalelser/forskuddsutskrivingen-2026/",
+      "evidence": "A",
+      "claim": "Bunnfradrag 1,9 mill. enslig; marginale skattesatser 1 %/1,1 % og trinn 21,5 mill.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-02",
+      "issuer": "Skatteetaten",
+      "title": "Skatte-ABC – A-4 Aksjer – formue",
+      "url": "https://oppslag.rettskilder.skatteetaten.no/rettskilder2/type/handboker/skatte-abc/gjeldende/skatteabc-A-4/skatteabc-A-4.015",
+      "evidence": "A",
+      "claim": "Unoterte norske aksjer verdsettes som hovedregel til 80 % av andel i skattemessig selskapsformue; goodwill utelatt.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-03",
+      "issuer": "Skatteetaten",
+      "title": "Skatte-ABC – A-4-4.2 og A-4-4.3",
+      "url": "https://oppslag.rettskilder.skatteetaten.no/rettskilder2/type/handboker/skatte-abc/gjeldende/skatteabc-A-4/skatteabc-A-4.015",
+      "evidence": "A",
+      "claim": "Ordinært verdsettelsestidspunkt er 1. januar i inntektsåret, særskilte unntak 1. januar påfølgende år.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-04",
+      "issuer": "Skatteetaten",
+      "title": "Skatte-ABC – V-2 Varebeholdning",
+      "url": "https://oppslag.rettskilder.skatteetaten.no/rettskilder2/type/handboker/skatte-abc/gjeldende/skatteabc-V-2",
+      "evidence": "A",
+      "claim": "Lager verdsettes til anskaffelses- eller faktisk tilvirkningskost; skattemessig ukuransnedskrivning normalt ikke tillatt.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-05",
+      "issuer": "Skatteetaten",
+      "title": "Gevinst, tap eller utbytte på aksjer – 2026",
+      "url": "https://www.skatteetaten.no/satser/faktor-for-oppjustering-av-gevinsttap-eller-utbytte-pa-aksjer",
+      "evidence": "A",
+      "claim": "Skattesats på personlige aksjegevinster og utbytte er 37,84 % før eventuell skjerming.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-06",
+      "issuer": "Skatteetaten",
+      "title": "Alminnelig inntekt – 2026",
+      "url": "https://www.skatteetaten.no/satser/alminnelig-inntekt/?year=2026",
+      "evidence": "A",
+      "claim": "22 % ordinær sats for selskapsinntekt i 2026.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-07",
+      "issuer": "Skatteetaten",
+      "title": "Skattemessig emigrasjon – opphør av skatteplikten",
+      "url": "https://www.skatteetaten.no/person/til-fra-norge/fra/skatt-ut-av-norge/skattemessig-emigrasjon/",
+      "evidence": "A",
+      "claim": "10 års botid, tredje påfølgende år, 61 dager, bolig og at Folkeregistermelding ikke er skattemessig utflytting.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-08",
+      "issuer": "Skatteetaten",
+      "title": "Skatte-ABC – U-10 Utland – gevinst og tap ved utflytting",
+      "url": "https://oppslag.rettskilder.skatteetaten.no/rettskilder2/type/handboker/skatte-abc/gjeldende/skatteabc-U-10/skatteabc-U-10.035/skatteabc-U-10.036",
+      "evidence": "A",
+      "claim": "3 mill. kr bunnfradrag for latent netto gevinst ved personlig utflytting; markedsverdi, tidfesting og 12-års betaling; 70 % utdelinger.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-09",
+      "issuer": "Skatteetaten",
+      "title": "Retningslinje for utsettelse av fastsatt utflyttingsskatt",
+      "url": "https://www.skatteetaten.no/rettskilder/type/retningslinjer/retningslinje-for-utsettelse-av-innbetaling-av-fastsatt-utflyttingsskatt-etter-skatteloven--10-70/",
+      "evidence": "A",
+      "claim": "Avdragsordning og sikkerhet ved utsatt betaling av utflyttingsskatt.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-10",
+      "issuer": "Skatteetaten",
+      "title": "Utsett formuesskatt på virksomhetsformue",
+      "url": "https://www.skatteetaten.no/person/skatt/skattekort/utsett-virksomhetsformue/",
+      "evidence": "A",
+      "claim": "Ordning fra inntektsåret 2026, minst 30 000 kr, inntil tre år, styringsrente +5 prosentpoeng.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-10B",
+      "issuer": "Skatteetaten",
+      "title": "Renter ved utsatt betaling av formuesskatt",
+      "url": "https://www.skatteetaten.no/nn/tabellar-og-satsar/renter-ved-utsatt-betaling-av-fomuesskatt-beregnet-pa-virksomhetsformue/",
+      "evidence": "A",
+      "claim": "2026: 9,00 % i første halvår og 9,25 % fra 1. juli.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-11",
+      "issuer": "Finansdepartementet",
+      "title": "Prop. 1 LS (2026–2027) kapittel 4",
+      "url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/?ch=2",
+      "evidence": "A",
+      "claim": "2027-bunnfradrag 1,99 mill. er forslag, ikke 2026-vedtatte regler.",
+      "checked_date": "2026-10-22"
+    },
+    {
+      "id": "K06C-12",
+      "issuer": "Stortinget",
+      "title": "Lovvedtak 13 (2025–2026), del III–IV",
+      "url": "https://www.stortinget.no/no/Saker-og-publikasjoner/Vedtak/Beslutninger/Lovvedtak/2025-2026/vedtak-202526-013/?all=true",
+      "evidence": "A",
+      "claim": "Betalingsutsettelse av formuesskatt med ikrafttredelse fra inntektsåret 2026",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-13",
+      "issuer": "Skatteetaten",
+      "title": "Skatte-ABC F-20-13, historisk inkonsistens",
+      "url": "https://www.skatteetaten.no/rettskilder/type/handboker/skatte-abc/gjeldende/f-20-formue/F-20.118/",
+      "evidence": "A",
+      "claim": "Side oppga ved kontroll 2025; i konflikt med lovvedtak om 2026; kildekonflikt loggført",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-14",
+      "issuer": "Finansdepartementet",
+      "title": "NOU 2026: 9, kapittel 6",
+      "url": "https://www.regjeringen.no/no/dokumenter/nou-2026-9/id3167167/?ch=6",
+      "evidence": "A",
+      "claim": "Forslag til ny formuesskatt, eierbeskatning og exit-regler; ikke vedtatt",
+      "checked_date": "2026-10-22",
+      "note": "Forslag, ikke vedtatt rett"
+    },
+    {
+      "id": "K06C-15",
+      "issuer": "Finansdepartementet",
+      "title": "NOU 2026: 9, kapittel 11",
+      "url": "https://www.regjeringen.no/no/dokumenter/nou-2026-9/id3167167/?ch=12",
+      "evidence": "A",
+      "claim": "Statisk utredning om omlegging og fordelingsvirkninger; ikke vedtatt",
+      "checked_date": "2026-10-22",
+      "note": "Forslag, ikke vedtatt rett"
+    },
+    {
+      "id": "K06C-16",
+      "issuer": "American Economic Review",
+      "title": "Jakobsen mfl. 2026, Taxing Top Wealth",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20241596",
+      "evidence": "C",
+      "claim": "Skandinavisk forskningsartikkel om migrasjon og aggregerte virkninger",
+      "checked_date": "2026-10-22",
+      "note": "Forskningsfunn må vurderes mot metodikk og populasjon"
+    },
+    {
+      "id": "K06C-17",
+      "issuer": "Cowles Foundation / NBER",
+      "title": "Ring 2026, Taxing Entrepreneurial Wealth",
+      "url": "https://cowles.yale.edu/research/cfdp-2563-taxing-entrepreneurial-wealth-evidence-norway-2021-2025",
+      "evidence": "C",
+      "claim": "Norsk arbeidsnotat om skattereform 2021–2025, migrasjon og virksomhetsutfall",
+      "checked_date": "2026-10-22",
+      "note": "Forskningsfunn må vurderes mot metodikk og populasjon"
+    },
+    {
+      "id": "K06C-18",
+      "issuer": "Finansdepartementet",
+      "title": "Prop. 1 LS (2024–2025) om utflyttingsskatt",
+      "url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20242025/id3057469/?ch=2",
+      "evidence": "A",
+      "claim": "Bakgrunn for gjeldende utflyttingsregler og betalingshendelser",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-19",
+      "issuer": "Finansdepartementet",
+      "title": "Endringer i lover og regler fra 1. januar 2026",
+      "url": "https://www.regjeringen.no/no/dokument/lover_regler/endringer-i-lover-og-regler/endringer-i-lover-og-regler-fra-1.-januar-2026/id3141571/",
+      "evidence": "A",
+      "claim": "Ikrafttredelsesoversikt for utsettelse av formuesskatt",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-20",
+      "issuer": "Skatteetaten",
+      "title": "Skattebetalingshåndboken § 9-3 (2026)",
+      "url": "https://oppslag.rettskilder.skatteetaten.no/rettskilder2/type/handboker/skattebetalingshandboken/gjeldende/SKTB_ID-9-0.001",
+      "evidence": "A",
+      "claim": "Forfall, renter og utsettelsesbetingelser",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-21",
+      "issuer": "Stortinget",
+      "title": "Skriftlig spørsmål og svar 17. august 2026",
+      "url": "https://stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=126947",
+      "evidence": "A",
+      "claim": "Svar om 2026-ordningen og tilgjengelig statistikk",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-22",
+      "issuer": "Finansdepartementet",
+      "title": "Meld. St. 6 (2024–2025)",
+      "url": "https://www.regjeringen.no/no/dokumenter/meld.-st.-6-20242025/id3068703/?ch=6",
+      "evidence": "A",
+      "claim": "Emisjonskapital, skattemessig aksjeformue og likviditet for unoterte selskaper",
+      "checked_date": "2026-10-22",
+      "note": ""
+    },
+    {
+      "id": "K06C-23",
+      "issuer": "Skatteetaten",
+      "title": "Aksjeoppgaven / aksjonærregisteroppgaven",
+      "url": "https://www.skatteetaten.no/person/skatt/hjelp-til-riktig-skatt/aksjer-og-verdipapirer/skjema/aksjeoppgaven/",
+      "evidence": "A",
+      "claim": "Opplysninger om aksjer og endringer i aksjekapital",
+      "checked_date": "2026-10-22",
+      "note": ""
+    }
+  ],
+  "source_conflicts": [
+    {
+      "id": "06C-konflikt-1",
+      "subject": "Ikrafttredelsesår for formuesskattens betalingsutsettelse",
+      "conflicting_source": "K06C-13, Skatte-ABC F-20-13, henviser til 2025",
+      "authoritative_sources": [
+        "K06C-12",
+        "K06C-19",
+        "K06C-20"
+      ],
+      "conclusion": "Ikrafttredelse fra inntektsåret 2026",
+      "resolution": "Vedtatt lovtekst gis forrang ved årstallsavvik"
+    }
+  ],
+  "model_status": "Forenklet rettsanvendelse og scenariomodell; ikke fagfellevurdert; etterkontroll kreves"
+}
